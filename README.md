@@ -1966,7 +1966,7 @@ Full credit is attributed to the original maintainers and contributors of Bailey
 
 This fork includes additional enhancements and modifications by [dycoders](https://github.com/)
 
-Special thanks to [itsreimau](https://github.com/Personaldycoders) for the fix to the `updateBlockStatus` implementation.
+Special thanks to [Dycoders](https://github.com/Personaldycoders) for the fix to the `updateBlockStatus` implementation.
 
 > [!CAUTION]
 > ⚠️ **Modification, removal, or misrepresentation of these credits is strictly prohibited. Any redistribution or fork must preserve this section in its original form without exception.**
