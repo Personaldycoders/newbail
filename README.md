@@ -1,6 +1,6 @@
 # 🌱 Personaldycoders/newbail
 
-[![Logo](https://dycoderss.xyz/img/og-image.png)](https://github.com/Personaldycoders/newbail)
+[![Logo](https://files.catbox.moe/us9so9.jpeg)](https://github.com/Personaldycoders/newbail)
 
 
 
