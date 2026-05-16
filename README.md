@@ -1,31 +1,10 @@
-# 🌱 @itsliaaa/baileys
+# 🌱 Personaldycoders/newbail
 
-[![Logo](https://files.catbox.moe/c5s9g0.jpg)](https://www.npmjs.com/package/@itsliaaa/baileys)
+[![Logo](https://dycoderss.xyz/img/og-image.png)](https://github.com/Personaldycoders/newbail)
 
-<p align="center">
-   Enhanced Baileys v7 with fixes for newsletter media uploads, plus support for interactive messages, albums, and additional message types.
-   <br><br>
-   <a href="https://www.npmjs.com/package/@itsliaaa/baileys">
-      <img src="https://img.shields.io/npm/v/@itsliaaa/baileys?style=for-the-badge&logo=npm"/>
-   </a>
-   <a href="https://www.npmjs.com/package/@itsliaaa/baileys">
-      <img src="https://img.shields.io/npm/dm/@itsliaaa/baileys?style=for-the-badge&logo=npm"/>
-   </a>
-   <a href="https://github.com/itsliaaa/baileys">
-      <img src="https://img.shields.io/github/stars/itsliaaa/baileys?style=for-the-badge&logo=github"/>
-   </a>
-   <a href="LICENSE">
-      <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge"/>
-   </a>
-   <a href="https://nodejs.org">
-      <img src="https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&labelColor=green&logoColor=white&style=for-the-badge"/>
-   </a>
-   <a href="#">
-      <img src="https://img.shields.io/badge/ESM-only?logo=javascript&labelColor=yellow&logoColor=black&style=for-the-badge"/>
-   </a>
-</p>
 
-☕ For donation: [Saweria](https://saweria.co/itsliaaa)
+
+☕ For donation: [Saweria](https://saweria.co/dycoders)
 
 ### ✨ Highlights
 
@@ -152,39 +131,36 @@ This fork designed for production use with a focus on clarity and safety:
 ```json
 # NPM
 "dependencies": {
-   "@itsliaaa/baileys": "latest"
+   "Personaldycoders/newbail": "latest"
 }
 
 # GitHub
 "dependencies": {
-   "@itsliaaa/baileys": "github:itsliaaa/baileys"
+   "Personaldycoders/newbail": "github:Personaldycoders/newbail"
 }
 ```
 
 - ⌨️ Via terminal
 
 ```bash
-# NPM
-npm i @itsliaaa/baileys@latest
-
 # GitHub
-npm i github:itsliaaa/baileys
+npm i github:Personaldycoders/newbail
 ```
 
 #### 🧩 Import (ESM & CJS)
 
 ```javascript
 // --- ESM
-import { makeWASocket } from '@itsliaaa/baileys'
+import { makeWASocket } from 'Personaldycoders/newbail'
 
 // --- CJS (tested and working on Node.js 24 ✅)
-const { makeWASocket } = require('@itsliaaa/baileys')
+const { makeWASocket } = require('Personaldycoders/newbail')
 ```
 
 ### 🌐 Connect to WhatsApp (Quick Step)
 
 ```javascript
-import { makeWASocket, delay, DisconnectReason, useMultiFileAuthState } from '@itsliaaa/baileys'
+import { makeWASocket, delay, DisconnectReason, useMultiFileAuthState } from 'Personaldycoders/newbail'
 import { Boom } from '@hapi/boom'
 import pino from 'pino'
 
@@ -248,7 +224,7 @@ connectToWhatsApp()
 > I highly recommend building your own data store, as keeping an entire chat history in memory can lead to excessive RAM usage.
 
 ```javascript
-import { makeWASocket, makeInMemoryStore, delay, DisconnectReason, useMultiFileAuthState } from '@itsliaaa/baileys'
+import { makeWASocket, makeInMemoryStore, delay, DisconnectReason, useMultiFileAuthState } from 'Personaldycoders/newbail'
 import { Boom } from '@hapi/boom'
 import pino from 'pino'
 
@@ -341,13 +317,13 @@ sock.sendMessage(jid, {
 })
 
 // --- Send a text message with a link preview
-const urlA = 'https://www.npmjs.com/package/@itsliaaa/baileys'
+const urlA = 'https://github.com/Personaldycoders/newbail'
 
 sock.sendMessage(jid, {
    text: urlA + ' 👆🏻 Check it out!',
    linkPreview: {
       'matched-text': urlA,
-      title: '🌱 @itsliaaa/baileys',
+      title: '🌱 Personaldycoders/newbail',
       description: 'Underrated Baileys Fork',
       previewType: 0, // --- Use 1 for video playback in the link preview
       jpegThumbnail: fs.readFileSync('./path/to/image.jpg')
@@ -355,9 +331,9 @@ sock.sendMessage(jid, {
 })
 
 // --- Send a text message with a large link preview and favicon
-import { prepareWAMessageMedia } from '@itsliaaa/baileys'
+import { prepareWAMessageMedia } from 'Personaldycoders/newbail'
 
-const urlB = 'https://www.npmjs.com/package/@itsliaaa/baileys#readme'
+const urlB = 'https://github.com/Personaldycoders/newbail#readme'
 
 const { imageMessage: image } = await prepareWAMessageMedia({
    image: {
@@ -376,7 +352,7 @@ sock.sendMessage(jid, {
    text: urlB + ' 👆🏻 Check it out!',
    linkPreview: {
       'matched-text': urlB,
-      title: '🌱 @itsliaaa/baileys',
+      title: '🌱 Personaldycoders/newbail',
       description: 'Underrated Baileys Fork',
       previewType: 0,
       jpegThumbnail: fs.readFileSync('./path/to/image.jpg'),
@@ -451,14 +427,14 @@ sock.sendMessage(jid, {
 ```javascript
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:Lia Wynn\n'
+            + 'FN:dycoders\n'
             + 'ORG:Waitress;\n'
             + 'TEL;type=CELL;type=VOICE;waid=628123456789:+62 8123 4567 89\n'
             + 'END:VCARD'
 
 sock.sendMessage(jid, {
    contacts: {
-      displayName: 'Lia Wynn',
+      displayName: 'dycoders',
       contacts: [
          { vcard }
       ]
@@ -514,7 +490,7 @@ const inviteCode = groupUrl
    ?.split('?')[0]
 
 const groupJid = '1201111111111@g.us'
-const groupName = '@itsliaaa/baileys'
+const groupName = 'Personaldycoders/newbail'
 
 sock.sendMessage(jid, {
    groupInvite: {
@@ -539,7 +515,7 @@ sock.sendMessage(jid, {
       url: './path/to/image.jpg'
    },
    body: '👋🏻 Check my product here!',
-   footer: '@itsliaaa/baileys',
+   footer: 'Personaldycoders/newbail',
    product: {
       currencyCode: 'IDR',
       description: '🛍️ Interesting product!',
@@ -547,9 +523,9 @@ sock.sendMessage(jid, {
       productId: randomUUID(),
       productImageCount: 1,
       salePriceAmount1000: 65_000_000,
-      signedUrl: 'https://www.npmjs.com/package/@itsliaaa/baileys',
+      signedUrl: 'https://github.com/Personaldycoders/newbail',
       title: '📦 Starseed (Premium)',
-      url: 'https://www.npmjs.com/package/@itsliaaa/baileys'
+      url: 'https://github.com/Personaldycoders/newbail'
    },
    businessOwnerJid: '0@s.whatsapp.net'
 })
@@ -713,7 +689,7 @@ sock.sendMessage(jid, {
 > You can easily add syntax highlighting by importing `tokenizeCode` directly from Baileys.
 
 ```javascript
-import { tokenizeCode } from '@itsliaaa/baileys'
+import { tokenizeCode } from 'Personaldycoders/newbail'
 
 const language = 'javascript'
 const code = 'console.log("Hello, World!")'
@@ -765,7 +741,7 @@ sock.sendMessage(jid, {
    }, {
       text: '3. Modded Baileys',
       title: 'Underrated Baileys Fork',
-      url: 'https://www.npmjs.com/package/@itsliaaa/baileys'
+      url: 'https://github.com/Personaldycoders/newbail'
    }],
    footerText: '---'
 })
@@ -923,8 +899,8 @@ sock.sendMessage(jid, {
       }
    }],
    name: '📦 My Sticker Pack',
-   publisher: '🌟 Lia Wynn',
-   description: '@itsliaaa/baileys'
+   publisher: '🌟 dycoders',
+   description: 'Personaldycoders/newbail'
 }, {
    quoted: message
 })
@@ -938,7 +914,7 @@ sock.sendMessage(jid, {
 // --- Regular buttons message
 sock.sendMessage(jid, {
    text: '👆🏻 Buttons!',
-   footer: '@itsliaaa/baileys',
+   footer: 'Personaldycoders/newbail',
    buttons: [{
       text: '👋🏻 SignUp',
       id: '#SignUp'
@@ -953,7 +929,7 @@ sock.sendMessage(jid, {
       url: './path/to/image.jpg'
    },
    caption: '👆🏻 Buttons and Native Flow!',
-   footer: '@itsliaaa/baileys',
+   footer: 'Personaldycoders/newbail',
    buttons: [{
       text: '👋🏻 Rating',
       id: '#Rating'
@@ -991,7 +967,7 @@ sock.sendMessage(jid, {
 ```javascript
 sock.sendMessage(jid, {
    text: '📋 List!',
-   footer: '@itsliaaa/baileys',
+   footer: 'Personaldycoders/newbail',
    buttonText: '📋 Select',
    title: '👋🏻 Hello',
    sections: [{
@@ -1023,12 +999,12 @@ sock.sendMessage(jid, {
       url: './path/to/image.jpg'
    },
    caption: '🗄️️ Interactive!',
-   footer: '@itsliaaa/baileys',
+   footer: 'Personaldycoders/newbail',
    optionText: '👉🏻 Select Options', // --- Optional, wrap all native flow into a single list
    optionTitle: '📄 Select Options', // --- Optional
    offerText: '🏷️ Newest Coupon!', // --- Optional, add an offer into message
-   offerCode: '@itsliaaa/baileys', // --- Optional
-   offerUrl: 'https://www.npmjs.com/package/@itsliaaa/baileys', // --- Optional
+   offerCode: 'Personaldycoders/newbail', // --- Optional
+   offerUrl: 'https://github.com/Personaldycoders/newbail', // --- Optional
    offerExpiration: Date.now() + 3_600_000, // --- Optional
    nativeFlow: [{
       text: '👋🏻 Greeting',
@@ -1039,10 +1015,10 @@ sock.sendMessage(jid, {
       call: '628123456789'
    }, {
       text: '📋 Copy',
-      copy: '@itsliaaa/baileys'
+      copy: 'Personaldycoders/newbail'
    }, {
       text: '🌐 Source',
-      url: 'https://www.npmjs.com/package/@itsliaaa/baileys',
+      url: 'https://github.com/Personaldycoders/newbail',
       useWebview: true // --- Optional
    }, {
       text: '📋 Select',
@@ -1074,7 +1050,7 @@ sock.sendMessage(jid, {
 // --- Carousel & Native Flow
 sock.sendMessage(jid, {
    text: '🗂️ Interactive with Carousel!',
-   footer: '@itsliaaa/baileys',
+   footer: 'Personaldycoders/newbail',
    cards: [{
       image: {
          url: './path/to/image.jpg'
@@ -1083,7 +1059,7 @@ sock.sendMessage(jid, {
       footer: '🏷️️ Pinterest',
       nativeFlow: [{
          text: '🌐 Source',
-         url: 'https://www.npmjs.com/package/@itsliaaa/baileys',
+         url: 'https://github.com/Personaldycoders/newbail',
          useWebview: true
       }]
    }, {
@@ -1093,12 +1069,12 @@ sock.sendMessage(jid, {
       caption: '🖼️ Image 2',
       footer: '🏷️ Pinterest',
       offerText: '🏷️ New Coupon!',
-      offerCode: '@itsliaaa/baileys',
-      offerUrl: 'https://www.npmjs.com/package/@itsliaaa/baileys',
+      offerCode: 'Personaldycoders/newbail',
+      offerUrl: 'https://github.com/Personaldycoders/newbail',
       offerExpiration: Date.now() + 3_600_000,
       nativeFlow: [{
          text: '🌐 Source',
-         url: 'https://www.npmjs.com/package/@itsliaaa/baileys'
+         url: 'https://github.com/Personaldycoders/newbail'
       }]
    }, {
       image: {
@@ -1109,8 +1085,8 @@ sock.sendMessage(jid, {
       optionText: '👉🏻 Select Options',
       optionTitle: '👉🏻 Select Options',
       offerText: '🏷️ New Coupon!',
-      offerCode: '@itsliaaa/baileys',
-      offerUrl: 'https://www.npmjs.com/package/@itsliaaa/baileys',
+      offerCode: 'Personaldycoders/newbail',
+      offerUrl: 'https://github.com/Personaldycoders/newbail',
       offerExpiration: Date.now() + 3_600_000,
       nativeFlow: [{
          text: '🛒 Product',
@@ -1118,7 +1094,7 @@ sock.sendMessage(jid, {
          icon: 'default'
       }, {
          text: '🌐 Source',
-         url: 'https://www.npmjs.com/package/@itsliaaa/baileys'
+         url: 'https://github.com/Personaldycoders/newbail'
       }]
    }]
 }, {
@@ -1154,13 +1130,13 @@ sock.sendMessage(jid, {
       url: './path/to/image.jpg'
    },
    caption: '🫙 Template!',
-   footer: '@itsliaaa/baileys',
+   footer: 'Personaldycoders/newbail',
    templateButtons: [{
       text: '👉🏻 Tap Here',
       id: '#Order'
    }, {
       text: '🌐 Source',
-      url: 'https://www.npmjs.com/package/@itsliaaa/baileys'
+      url: 'https://github.com/Personaldycoders/newbail'
    }, {
       text: '📞 Call',
       call: '628123456789'
@@ -1261,7 +1237,7 @@ sock.sendMessage(jid, {
       body: '❓ I dont know',
       thumbnail: fs.readFileSync('./path/to/image.jpg'), // --- Must in buffer format
       largeThumbnail: false, // --- Or true for bigger thumbnail
-      url: 'https://www.npmjs.com/package/@itsliaaa/baileys' // --- Optional, used for WhatsApp internal thumbnail caching and direct URL
+      url: 'https://github.com/Personaldycoders/newbail' // --- Optional, used for WhatsApp internal thumbnail caching and direct URL
    }
 }, {
    quoted: message
@@ -1291,7 +1267,7 @@ sock.sendMessage(jid, {
       text: '📃 Built manually from scratch using the raw WhatsApp proto structure',
       contextInfo: {
          externalAdReply: {
-            title: '@itsliaaa/baileys',
+            title: 'Personaldycoders/newbail',
             thumbnail: fs.readFileSync('./path/to/image.jpg'),
             sourceApp: 'whatsapp',
             showAdAttribution: true,
@@ -1455,7 +1431,7 @@ console.log('🔗 Pairing code', ':', customPairingCode)
 > Automatically use available image processing library: `sharp`, `@napi-rs/image`, or `jimp`
 
 ```javascript
-import { getImageProcessingLibrary } from '@itsliaaa/baileys'
+import { getImageProcessingLibrary } from 'Personaldycoders/newbail'
 import { readFile } from 'fs/promises'
 
 const lib = await getImageProcessingLibrary()
@@ -1509,7 +1485,7 @@ console.dir(output, { depth: null })
 
 ```javascript
 // --- Create a new one
-sock.newsletterCreate('@itsliaaa/baileys', '📣 Fresh updates weekly')
+sock.newsletterCreate('Personaldycoders/newbail', '📣 Fresh updates weekly')
 
 // --- Get info
 const metadata = sock.newsletterMetadata('1231111111111@newsletter')
@@ -1534,10 +1510,10 @@ sock.newsletterDemote('1231111111111@newsletter', '6281111111111@s.whatsapp.net'
 sock.newsletterChangeOwner('1231111111111@newsletter', '6281111111111@s.whatsapp.net')
 
 // --- Update newsletter
-sock.newsletterUpdate('1231111111111@newsletter', { name: '@itsliaaa/baileys' })
+sock.newsletterUpdate('1231111111111@newsletter', { name: 'Personaldycoders/newbail' })
 
 // --- Change name
-sock.newsletterUpdateName('1231111111111@newsletter', '📦 @itsliaaa/baileys')
+sock.newsletterUpdateName('1231111111111@newsletter', '📦 Personaldycoders/newbail')
 
 // --- Change description
 sock.newsletterUpdateDescription('1231111111111@newsletter', '📣 Fresh updates weekly')
@@ -1572,7 +1548,7 @@ sock.newsletterDelete('1231111111111@newsletter')
 
 ```javascript
 // --- Create a new one and add participants using their JIDs
-const group = sock.groupCreate('@itsliaaa/baileys', ['628123456789@s.whatsapp.net'])
+const group = sock.groupCreate('Personaldycoders/newbail', ['628123456789@s.whatsapp.net'])
 console.dir(group, { depth: null })
 
 // --- Get info
@@ -1609,7 +1585,7 @@ sock.groupParticipantsUpdate(jid, ['628123456789@s.whatsapp.net'], 'demote')
 sock.groupRequestParticipantsUpdate(jid, ['628123456789@s.whatsapp.net'], 'approve')
 
 // --- Change name
-sock.groupUpdateSubject(jid, '📦 @itsliaaa/baileys')
+sock.groupUpdateSubject(jid, '📦 Personaldycoders/newbail')
 
 // --- Change description
 sock.groupUpdateDescription(jid, 'Updated description')
@@ -1663,14 +1639,14 @@ const group = await sock.groupGetInviteInfo('ABC123456789')
 console.log('👥 Got group info from invite code', ':', group)
 
 // --- Update bot member label
-sock.updateMemberLabel(jid, '@itsliaaa/baileys')
+sock.updateMemberLabel(jid, 'Personaldycoders/newbail')
 ```
 
 #### 👥 Community Management
 
 ```javascript
 // --- Create a new one and add description
-const community = await sock.communityCreate('@itsliaaa/baileys', '📣 Fresh updates weekly')
+const community = await sock.communityCreate('Personaldycoders/newbail', '📣 Fresh updates weekly')
 console.dir(community, { depth: null })
 
 // --- Create a subgroup for community and add participants using their JIDs
@@ -1703,7 +1679,7 @@ sock.communityLeave(jid)
 sock.communityRequestParticipantsUpdate(jid, ['628123456789@s.whatsapp.net'], 'approve')
 
 // --- Change name
-sock.communityUpdateSubject(jid, '📦 @itsliaaa/baileys')
+sock.communityUpdateSubject(jid, '📦 Personaldycoders/newbail')
 
 // --- Change description
 sock.communityUpdateDescription(jid, 'Updated description')
@@ -1871,7 +1847,7 @@ console.dir(order, { depth: null })
 await sock.updateBusinessProfile({
    address: 'Jakarta, Indonesia',
    description: '🛒 Official Starseed Store',
-   websites: ['https://www.npmjs.com/package/@itsliaaa/baileys'],
+   websites: ['https://github.com/Personaldycoders/newbail'],
    email: 'more-more@gmail.com',
    hours: {
       timezone: 'Asia/Jakarta',
@@ -1977,13 +1953,6 @@ sock.ev.on('newsletter-settings.update', (update) => {})
 sock.ev.on('settings.update', (update) => {})
 ```
 
-### 🚀 Try the Bot
-
-A fast, lightweight, and modular WhatsApp bot built with [@itsliaaa/baileys](https://www.npmjs.com/package/@itsliaaa/baileys).
-Perfect for managing groups, moderating chats, and adding fun with quiz games and handy tools.
-
-👉🏻 [@itsliaaa/starseed](https://github.com/itsliaaa/starseed#readme)
-
 ### 📦 Fork Base
 
 This fork is based on [Baileys (GitHub)](https://github.com/WhiskeySockets/Baileys)
@@ -1995,9 +1964,9 @@ Full credit is attributed to the original maintainers and contributors of Bailey
 - [jlucaso1](https://github.com/jlucaso1)
 - [adiwajshing](https://github.com/adiwajshing)
 
-This fork includes additional enhancements and modifications by [Lia Wynn](https://github.com/itsliaaa)
+This fork includes additional enhancements and modifications by [dycoders](https://github.com/)
 
-Special thanks to [itsreimau](https://github.com/itsreimau) for the fix to the `updateBlockStatus` implementation.
+Special thanks to [itsreimau](https://github.com/Personaldycoders) for the fix to the `updateBlockStatus` implementation.
 
 > [!CAUTION]
 > ⚠️ **Modification, removal, or misrepresentation of these credits is strictly prohibited. Any redistribution or fork must preserve this section in its original form without exception.**
