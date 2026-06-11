@@ -397,8 +397,8 @@ declare function makeWASocket(config: any): {
     groupJoinApprovalMode: (jid: any, mode: any) => Promise<void>;
     groupFetchAllParticipating: () => Promise<{}>;
     findUserId: (pnLid: any) => Promise<{
-        phoneNumber: any;
-        lid: any;
+        lid: undefined;
+        phoneNumber: undefined;
     }>;
     serverProps: {
         privacyTokenOn1to1: boolean;
@@ -426,7 +426,7 @@ declare function makeWASocket(config: any): {
     appPatch: (patchCreate: any) => Promise<void>;
     sendPresenceUpdate: (type: any, toJid: any) => Promise<void>;
     presenceSubscribe: (toJid: any) => Promise<void>;
-    profilePictureUrl: (jid: any, type: string | undefined, timeoutMs: any) => Promise<any>;
+    profilePictureUrl: (jid: any, type?: string, timeoutMs?: number, shouldIncludeTcToken?: boolean) => Promise<any>;
     fetchBlocklist: () => Promise<any>;
     fetchStatus: (...jids: any[]) => Promise<any>;
     fetchDisappearingDuration: (...jids: any[]) => Promise<any>;
